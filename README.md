@@ -1,4 +1,4 @@
-Random World Map Generator
+Meave Map Generator
 ==========================
 [![crates.io][crate-badge]][crate]
 [![npm version][npm-badge]][npm]
@@ -16,24 +16,14 @@ Screenshot:
 
 ### Example of generated 120x120 map in 3D
 
-![screenshot of 3D map](https://github.com/raphtlw/ss/blob/master/mapgen/3d.png?raw=true)
+![screenshot of 3D map](https://github.com/meaveio/mapgen/raw/ss/1.png)
 
 ### Example of generated map in 2D
 
-![screenshot of 2D map](https://github.com/raphtlw/ss/blob/master/mapgen/2d.png?raw=true)
-
-### Example of generated map in terminal (iTerm2)
-
-![screenshot of map in terminal](https://github.com/raphtlw/ss/blob/master/mapgen/term.png?raw=true)
-
-This project is my personal practice to create a Rust library which works fine as both normal Rust
-library and WebAssembly library, which is a bit more practical than
-[awesome Rust+Wasm tutorial](https://rustwasm.github.io/book/game-of-life/introduction.html).
+![screenshot of 2D map](https://github.com/meaveio/mapgen/raw/ss/2.png)
 
 I leaned the algorithm to generate world maps from [this small book](https://www.amazon.com/dp/B07MXZTTCW)
 and implemented it (with small improvements).
-
-
 
 ## Installation
 
