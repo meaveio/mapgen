@@ -1,0 +1,30 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Build wasm package
+        run: make build-wasm-release
+      
+      - name: Install and Build www
+        working-directory: www
+        run: |
+          npm ci
+          npm run release
+      
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages
+          folder: www/dist
