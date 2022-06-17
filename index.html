@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meave Map Generator</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+  </head>
+  <body>
+    <main class="main-content columns is-fullheight">
+      <aside class="column is-2 is-narrow-mobile is-fullheight section">
+        <h1 class="title">
+          <img class="logo" alt="Logo" src="assets/images/map.svg" />Meave Map
+          Generator
+        </h1>
+
+        <header class="header">
+          <p>
+            <strong>mapgen</strong> is a blazingly fast map generator developed
+            internally for Meave. It can be used to generate maps in 2D or 3D
+            with depth data.
+          </p>
+        </header>
+
+        <div class="field">
+          <label class="label">Visualization</label>
+          <div class="control">
+            <div class="select">
+              <select id="dimension-selector">
+                <option value="2d">2D</option>
+                <option value="3d">3D</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizonta">
+          <label class="label">Board Size (in cells)</label>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input
+                  id="width-input"
+                  class="input"
+                  type="text"
+                  placeholder="Width"
+                />
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input
+                  id="height-input"
+                  class="input"
+                  type="text"
+                  placeholder="Height"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button id="paint-button" class="button is-link">Generate</button>
+          </div>
+        </div>
+      </aside>
+
+      <section class="section column rows is-fullheight align-center">
+        <div id="screen-root" class="row"></div>
+        <div id="legends" class="row"></div>
+        <div class="section columns justify-center">
+          <button id="download-json-button" class="button is-link">
+            Download JSON
+          </button>
+          <button id="download-png-button" class="button is-link">
+            Download PNG
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <pre>Copyright &copy; 2019 raphtlw</pre>
+    </footer>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
