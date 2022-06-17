@@ -8,7 +8,7 @@
 //!
 //! Please read README.md of repository hosted on GitHub.
 //!
-//! https://github.com/rhysd/world-map-gen
+//! https://github.com/raphtlw/mapgen
 //!
 //! This document explains 1., as an API library for Rust.
 //!
@@ -21,7 +21,7 @@
 //! - `error`: Error type which may be returned from a map generator
 //!
 //! ```rust
-//! use world_map_gen::RandomBoardGen;
+//! use mapgen::RandomBoardGen;
 //!
 //! // Create generator instance with default random number generator
 //! let mut generator = RandomBoardGen::default();
@@ -37,7 +37,7 @@
 //! for (i, row) in board.rows().enumerate() {
 //!     println!("Row: {}", i);
 //!     for cell in row {
-//!         // cell is a world_map_gen::land::Land instance
+//!         // cell is a mapgen::land::Land instance
 //!
 //!         // Lands are categorized with kind (e.g. Sea, Plain, Forest, Mountain, ...)
 //!         println!("Kind: {:?}", cell.kind);
@@ -49,12 +49,29 @@
 //! }
 //! ```
 
+#![deny(missing_docs)]
+
+#[macro_use]
+extern crate lazy_static;
+#[macro_use]
+extern crate serde_derive;
+
+pub mod board;
+pub mod draw;
+pub mod error;
 pub mod gen;
-pub use gen::*;
+pub mod land;
+#[cfg(target_arch = "wasm32")]
+pub mod wasm;
+
+mod color;
+mod large_gen;
+mod middle_gen;
+mod slope;
 
 pub use crate::board::Board;
 pub use crate::error::Result;
-pub use crate::gen::gen::RandomBoardGen;
+pub use crate::gen::RandomBoardGen;
 pub use crate::land::LandKind;
 
 use cfg_if::cfg_if;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meave Map Generator</title>
+    <title>Random World Map Generator</title>
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -34,15 +34,33 @@
     <main class="main-content columns is-fullheight">
       <aside class="column is-2 is-narrow-mobile is-fullheight section">
         <h1 class="title">
-          <img class="logo" alt="Logo" src="assets/images/map.svg" />Meave Map
+          <img class="logo" alt="Logo" src="assets/images/map.svg" />World Map
           Generator
         </h1>
 
         <header class="header">
           <p>
-            <strong>mapgen</strong> is a blazingly fast map generator developed
-            internally for Meave. It can be used to generate maps in 2D or 3D
-            with depth data.
+            <strong>mapgen</strong> is Shipped as
+            <a
+              href="https://crates.io/crates/mapgen"
+              target="_blank"
+              rel="noopener"
+              >Rust crate</a
+            >,
+            <a
+              href="https://github.com/raphtlw/mapgen/blob/master/src/main.rs"
+              target="_blank"
+              rel="noopener"
+              >CLI tool</a
+            >, and
+            <a
+              href="https://www.npmjs.com/package/mapgen"
+              target="_blank"
+              rel="noopener"
+              >Wasm package</a
+            >. Please visit
+            <a href="https://github.com/raphtlw/mapgen">GitHub repo</a> for more
+            details.
           </p>
         </header>
 
@@ -51,8 +69,8 @@
           <div class="control">
             <div class="select">
               <select id="dimension-selector">
-                <option value="2d">2D</option>
                 <option value="3d">3D</option>
+                <option value="2d">2D</option>
               </select>
             </div>
           </div>
