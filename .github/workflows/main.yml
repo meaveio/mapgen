@@ -14,6 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      
       - name: Build wasm package
         run: make build-wasm-release
       
