@@ -1,16 +1,11 @@
 Meave Map Generator
 ==========================
-[![crates.io][crate-badge]][crate]
-[![npm version][npm-badge]][npm]
-[![documentation][doc-badge]][doc]
-[![CI on Linux and macOS][travis-ci-badge]][travis-ci]
-[![CI on Windows][appveyor-badge]][appveyor]
 
 `mapgen` is a CLI tool and library for Rust and WebAssembly.
 It provides functionality to generate a random world map for games like a retro tactical simulation game.
 A generated map consists of cells. Each cell has its altitude and kind (sea, town, plain, forest, mountain, ...).
 
-Try it on browser by visiting [project page][proj] or on your terminal by installing [CLI app][crate].
+Try it on browser by visiting [project page][proj].
 
 Screenshot:
 
@@ -232,10 +227,7 @@ For debugging Wasm package from browser, please build this package with [wasm-pa
 Distributed under [the MIT License](LICENSE.txt).
 
 
-[proj]: https://raphtlw.github.io/mapgen
-[crate]: https://crates.io/crates/mapgen
-[crate-badge]: https://img.shields.io/crates/v/mapgen.svg
-[npm-badge]: https://badge.fury.io/js/mapgen.svg
+[proj]: https://meaveio.github.io/mapgen
 [npm]: https://www.npmjs.com/package/mapgen
 [doc-badge]: https://docs.rs/mapgen/badge.svg
 [doc]: https://docs.rs/mapgen
